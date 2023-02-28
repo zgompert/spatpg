@@ -668,9 +668,9 @@ double mcmc :: calcp(double p0, double sel){
   Z = (1 - p0) * (1 - p0);
 
   // w22 = 1, w12 = 1 + 2hs, w11 = 1 + 2s
-  w[1] = 1 + 2.0 * sel;
-  w[2] = 1 + 2.0 * h * sel;
-  w[3] = 1;
+  w[0] = 1 + 2.0 * sel;
+  w[1] = 1 + 2.0 * h * sel;
+  w[2] = 1;
   wbar = X * w[0] + Y2 * w[1] + Z * w[2];
   
   p1 = p0 + (X * w[0] + 0.5 * Y2 * w[1] - p0 * wbar)/wbar;
