@@ -144,7 +144,7 @@ int main(int argc, char *argv[]) {
   cout << "Estimating selection coefficients (* = 1000 steps)" << endl;
 
   for(n=0; n<chainLength; n++){
-    chain.update(&data,(n-burn)/thin);
+    chain.update(&data,(chainLength-burn)/thin);
     if((n>=burn) && ((n-burn)%thin == 0)){
       chain.store(&data, &hdf5, (n-burn)/thin);
       chain.storeP(&data, &hdf5, (n-burn)/thin);

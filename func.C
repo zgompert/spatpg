@@ -26,7 +26,7 @@ void usage(char * name){
   fprintf(stdout, "-n     Number of MCMC steps [1000]\n");
   fprintf(stdout, "-N     Boolean, estimate Ne from the data [1]\n");
   fprintf(stdout, "-b     Number of MCMC steps to discard as a burnin [0]\n");
-  fprintf(stdout, "-t     Thinning interval integer), recore every nth step [1]\n");
+  fprintf(stdout, "-t     Thinning interval (integer), recore every nth step [1]\n");
   fprintf(stdout, "-l     Lower bound for uniform prior on Ne [20]\n");
   fprintf(stdout, "-u     Upper bound for uniform prior on Ne [4000]\n");
   fprintf(stdout, "-s     Standard deviation for prior on coefficients [0.1]\n");

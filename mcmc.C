@@ -437,13 +437,13 @@ void mcmc :: write(dataset * data, hdf5cont * hdf5, int n){
 //  select a value of Ne from the posterior
 void mcmc :: sampleNeP(dataset * data, int N){
   uint j;
+  uint sam;
   double val;
 
-  if(N < 0)
-    N = 0;
+  sam = gsl_rng_uniform_int(r, N);
 
   for(j=0; j<nemcmc->size1; j++){
-    val = gsl_matrix_get(nemcmc, j, N);
+    val = gsl_matrix_get(nemcmc, j, sam);
     gsl_vector_set(ne, j, val);
   }
 }
