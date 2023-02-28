@@ -671,9 +671,9 @@ double mcmc :: calcp(double p0, double sel){
   w[1] = 1 + 2.0 * sel;
   w[2] = 1 + 2.0 * h * sel;
   w[3] = 1;
-  wbar = X * w[1] + Y2 * w[2] + Z * w[3];
+  wbar = X * w[0] + Y2 * w[1] + Z * w[2];
   
-  p1 = p0 + (X * w[1] + 0.5 * Y2 * w[2] - p0 * wbar)/wbar;
+  p1 = p0 + (X * w[0] + 0.5 * Y2 * w[1] - p0 * wbar)/wbar;
   
   if(p1 >= 0.999)
     p1 = 0.999;
