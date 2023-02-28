@@ -1,5 +1,6 @@
 # spatpg
-estimate population size and selection from genetic time-series data 
+
+Estimate population size and selection from genetic time-series data 
 
 Requires GSL and HDF5
 To compile try,
